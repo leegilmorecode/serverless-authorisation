@@ -1,0 +1,431 @@
+{
+  "info": {
+    "_postman_id": "067391ab-1f8e-4bbf-a488-3f86ae676dd4",
+    "name": "Serverless Authorisation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "[M2M] List Sushi Orders",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "accessTokenUrl",
+              "value": "https://sushi-orders-user-pool-domain.auth.eu-west-1.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "clientSecret",
+              "value": "clientSecret",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "clientId",
+              "type": "string"
+            },
+            {
+              "key": "tokenType",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "accessToken",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "scope",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "tokenName",
+              "value": "auth_token",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "SuperSecretKey!12345",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/ClientId/orders/",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": ["prod", "companies", "ClientId", "orders", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[M2M] Get Sushi Order",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "clientSecret",
+              "value": "ClientSecret",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "ClientId",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://sushi-orders-user-pool-domain.auth.eu-west-1.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "scope",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "tokenType",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "tokenName",
+              "value": "auth_token",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "SuperSecretKey!12345",
+            "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/ClientId/orders/2",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": ["prod", "companies", "ClientId", "orders", "2"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[M2M] Create Sushi Order",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "clientSecret",
+              "value": "ClientSecret",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "ClientId",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://sushi-orders-user-pool-domain.auth.eu-west-1.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "scope",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "tokenType",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "tokenName",
+              "value": "auth_token",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "SuperSecretKey!12345",
+            "type": "text"
+          },
+          {
+            "warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+            "key": "",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/ClientId/orders",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": ["prod", "companies", "ClientId", "orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[User] List Sushi Orders",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer access_token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/222/users/bf972eee-64a5-4012-a892-9491e5d56041/orders",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": [
+            "prod",
+            "companies",
+            "222",
+            "users",
+            "bf972eee-64a5-4012-a892-9491e5d56041",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[User] Create Sushi Order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer access_token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/111/users/bf972eee-64a5-4012-a892-9491e5d56041/orders",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": [
+            "prod",
+            "companies",
+            "111",
+            "users",
+            "bf972eee-64a5-4012-a892-9491e5d56041",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[User] Get Sushi Order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer access_token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/111/users/bf972eee-64a5-4012-a892-9491e5d56041/orders/222",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": [
+            "prod",
+            "companies",
+            "111",
+            "users",
+            "bf972eee-64a5-4012-a892-9491e5d56041",
+            "orders",
+            "222"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[User] Get Permissions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/users/bf972eee-64a5-4012-a892-9491e5d56041",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": ["prod", "users", "bf972eee-64a5-4012-a892-9491e5d56041"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "[User] Validate Voucher",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer access_token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://x.execute-api.eu-west-1.amazonaws.com/prod/companies/1111/users/2222/vouchers/3333",
+          "protocol": "https",
+          "host": ["x", "execute-api", "eu-west-1", "amazonaws", "com"],
+          "path": [
+            "prod",
+            "companies",
+            "1111",
+            "users",
+            "2222",
+            "vouchers",
+            "3333"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "clientSecret",
+        "value": "ClientSecret",
+        "type": "string"
+      },
+      {
+        "key": "clientId",
+        "value": "ClientId",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://sushi-orders-user-pool-domain.auth.eu-west-1.amazoncognito.com/oauth2/token",
+        "type": "string"
+      },
+      {
+        "key": "tokenName",
+        "value": "auth_token",
+        "type": "string"
+      },
+      {
+        "key": "challengeAlgorithm",
+        "value": "S256",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "client_authentication",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ]
+}
