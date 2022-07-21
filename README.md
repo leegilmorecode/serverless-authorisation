@@ -4,7 +4,7 @@ Examples of authorisation in serverless solutions alongside both machine to mach
 
 ![header](./docs/images/header.png)
 
-The article can be found here: x
+The article can be found here: https://leejamesgilmore.medium.com/serverless-authorisation-e5bd9288f0ff
 
 ## Getting started
 
